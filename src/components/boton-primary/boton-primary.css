@@ -1,0 +1,91 @@
+:host {
+  display: inline-block;
+}
+
+:host {
+  --inner-border-light: #ffffff;
+  --inner-border-dark: #0d104d;
+}
+
+/* base */
+.btn {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform .12s ease, background .12s ease;
+  font-size: 0.95rem;
+  overflow: hidden;
+  border: none;
+}
+
+/* borde interior dinámico */
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 6px;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 1;
+}
+
+/* efecto de brillo dinámico */
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.50),
+    rgba(255, 255, 255, 0.05)
+  );
+  border-radius: 50%;
+  top: calc(var(--my) - 45px);
+  left: calc(var(--mx) - 45px);
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity .15s ease;
+  opacity: 0;
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Colores */
+.btn-light-blue {
+  background-color: #add8e6;
+  color: #0d104d;
+}
+.btn-light-blue::before {
+  border: 2px solid var(--inner-border-light);
+}
+
+.btn-medium-blue {
+  background-color: #4682b4;
+}
+.btn-medium-blue::before {
+  border: 2px solid var(--inner-border-dark);
+}
+
+.btn-dark-blue {
+  background-color: #1e90ff;
+}
+.btn-dark-blue::before {
+  border: 2px solid var(--inner-border-dark);
+}
+
+.btn-darker-blue {
+  background-color: #00008b;
+}
+.btn-darker-blue::before {
+  border: 2px solid var(--inner-border-light);
+}

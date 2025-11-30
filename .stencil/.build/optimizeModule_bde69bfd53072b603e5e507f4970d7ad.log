@@ -1,0 +1,1 @@
+import{p as r,b as o}from"./p-Cw0heJqE.js";export{s as setNonce}from"./p-Cw0heJqE.js";import{g as a}from"./p-DQuL1Twl.js";var t=()=>{const o=import.meta.url;const s={};if(o!==""){s.resourcesUrl=new URL(".",o).href}return r(s)};t().then((async r=>{await a();return o([["p-448bdaff",[[257,"boton-primary",{color:[1],disabled:[4]}]]]],r)}));
