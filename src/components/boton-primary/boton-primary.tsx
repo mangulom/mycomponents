@@ -28,7 +28,8 @@ export class BotonPrimary {
   };
 
   private handleMouseMove = (event: MouseEvent) => {
-    const rect = (event.target as HTMLElement).getBoundingClientRect();
+    const button = event.currentTarget as HTMLElement;
+    const rect = button.getBoundingClientRect();
     this.mouseX = event.clientX - rect.left;
     this.mouseY = event.clientY - rect.top;
   };
@@ -41,8 +42,8 @@ export class BotonPrimary {
         onClick={this.handleClick}
         onMouseMove={this.handleMouseMove}
         style={{
-          '--mx': `${this.mouseX}px`,
-          '--my': `${this.mouseY}px`
+          '--x': `${this.mouseX}px`,
+          '--y': `${this.mouseY}px`
         }}
       >
         {this.texto}

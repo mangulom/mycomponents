@@ -1,0 +1,1 @@
+import{p as o,b as r}from"./p-Dnx41rRo.js";export{s as setNonce}from"./p-Dnx41rRo.js";import{g as t}from"./p-DQuL1Twl.js";var e=()=>{const r=import.meta.url;const s={};if(r!==""){s.resourcesUrl=new URL(".",r).href}return o(s)};e().then((async o=>{await t();return r([["p-15ed8768",[[257,"boton-primary",{color:[1],disabled:[4],texto:[1],mouseX:[32],mouseY:[32]}]]]],o)}));

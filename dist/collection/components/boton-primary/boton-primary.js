@@ -12,15 +12,16 @@ export class BotonPrimary {
             }
         };
         this.handleMouseMove = (event) => {
-            const rect = event.target.getBoundingClientRect();
+            const button = event.currentTarget;
+            const rect = button.getBoundingClientRect();
             this.mouseX = event.clientX - rect.left;
             this.mouseY = event.clientY - rect.top;
         };
     }
     render() {
-        return (h("button", { key: 'c6bea8eff6700064cc97aeeeccd9a91a2506a61e', class: `btn btn-${this.color}`, disabled: this.disabled, onClick: this.handleClick, onMouseMove: this.handleMouseMove, style: {
-                '--mx': `${this.mouseX}px`,
-                '--my': `${this.mouseY}px`
+        return (h("button", { key: '4d95a0dbb9b9706218c55d805957bb915e4d2527', class: `btn btn-${this.color}`, disabled: this.disabled, onClick: this.handleClick, onMouseMove: this.handleMouseMove, style: {
+                '--x': `${this.mouseX}px`,
+                '--y': `${this.mouseY}px`
             } }, this.texto));
     }
     static get is() { return "boton-primary"; }
