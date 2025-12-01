@@ -1,6 +1,8 @@
 {
   "entries": [
-    "components/boton-primary/boton-primary.js"
+    "components/boton-green/boton-green.js",
+    "components/boton-primary/boton-primary.js",
+    "components/boton-red/boton-red.js"
   ],
   "compiler": {
     "name": "@stencil/core",

@@ -1,6 +1,6 @@
-import { r as registerInstance, c as createEvent, h } from './index-Dnx41rRo.js';
+import { r as registerInstance, c as createEvent, h } from './index-CvtmycoX.js';
 
-const botonPrimaryCss = ":host{display:inline-block}:host{display:inline-block;--inner-border-light:#ffffff;--inner-border-dark:#0d104d}.btn{position:relative;z-index:2;color:#fff;padding:12px 22px;border-radius:8px;cursor:pointer;transition:transform 0.12s ease;font-size:0.95rem;overflow:hidden;border:2px solid rgba(255,255,255,0.9);font-family:'Poppins', sans-serif}.btn::before{content:\"\";position:absolute;inset:3px;border-radius:6px;border:2px solid;z-index:1;pointer-events:none}.btn::after{content:\"\";position:absolute;top:calc(var(--y) - 40px);left:calc(var(--x) - 40px);width:80px;height:80px;background:radial-gradient(\r\n    circle,\r\n    rgba(255, 255, 255, 0.22),\r\n    rgba(255, 255, 255, 0.02)\r\n  );border-radius:50%;pointer-events:none;transition:top 0.08s ease, left 0.08s ease, opacity 0.15s ease;z-index:0;opacity:0}.btn:hover::after{opacity:1}.btn:hover{transform:translateY(-2px)}.btn-light-blue{background:#009CDE}.btn-medium-blue{background:#0067B8}.btn-dark-blue{background:#003DA5}.btn-darker-blue{background:#00205B}.btn-light-blue::before{border-color:var(--inner-border-dark)}.btn-medium-blue::before{border-color:var(--inner-border-light);}.btn-dark-blue::before,.btn-darker-blue::before{border-color:var(--inner-border-light)}";
+const botonPrimaryCss = "@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); :host{display:inline-block}.btn{position:relative;z-index:2;color:#fff;height:52px;width:auto;padding:0 24px;border-radius:8px;cursor:pointer;transition:transform 0.12s ease;font-size:0.95rem;overflow:hidden;border:1px solid rgba(255,255,255,0.9);font-family:'Poppins', sans-serif !important;display:inline-flex;align-items:center;justify-content:center;gap:12px;vertical-align:middle;line-height:52px;}.btn span,.btn .btn-text{display:flex;align-items:center;line-height:1}.btn::before{content:\"\";position:absolute;inset:3px;border-radius:6px;border:1px solid;z-index:1;pointer-events:none}.btn::after{content:\"\";position:absolute;top:calc(var(--y) - 40px);left:calc(var(--x) - 40px);width:80px;height:80px;background:radial-gradient(circle, rgba(255,255,255,0.22), rgba(255,255,255,0.02));border-radius:50%;pointer-events:none;transition:top 0.08s ease, left 0.08s ease, opacity 0.15s ease;z-index:0;opacity:0}.btn:hover::after{opacity:1}.btn:hover{transform:translateY(-2px)}.btn-light-blue{background:#009CDE}.btn-medium-blue{background:#0067B8}.btn-dark-blue{background:#003DA5}.btn-darker-blue{background:#00205B}.btn-light-blue::before,.btn-medium-blue::before,.btn-dark-blue::before,.btn-darker-blue::before{border-color:#ffffff}.icon-circle{width:28px;height:28px;border-radius:50%;background:#ffffff;color:#528cf8;display:flex;align-items:center;justify-content:center;flex-shrink:0;line-height:1;position:relative;top:0}";
 
 const BotonPrimary = class {
     constructor(hostRef) {
@@ -9,6 +9,8 @@ const BotonPrimary = class {
         this.color = 'medium-blue';
         this.disabled = false;
         this.texto = 'Aceptar';
+        /** nombre del icono FA */
+        this.icon = null;
         this.mouseX = 0;
         this.mouseY = 0;
         this.handleClick = () => {
@@ -23,11 +25,18 @@ const BotonPrimary = class {
             this.mouseY = event.clientY - rect.top;
         };
     }
+    /** SVG real en Shadow DOM */
+    renderIcon() {
+        if (this.icon === 'save') {
+            return (h("svg", { viewBox: "0 0 448 512", fill: "currentColor", width: "16", height: "16", style: { display: 'block' } }, h("path", { d: "M433.94 129.94l-83.88-83.88A48 48 0 0 0 316.12 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V163.88a48 48 0 0 0-14.06-33.94zM224 416a64 64 0 1 1 64-64a64 64 0 0 1-64 64zm96-304v64a16 16 0 0 1-16 16H80a16 16 0 0 1-16-16V80a16 16 0 0 1 16-16h224a16 16 0 0 1 11.31 4.69L316.69 92a16 16 0 0 1 3.31 9z" })));
+        }
+        return null;
+    }
     render() {
-        return (h("button", { key: '4d95a0dbb9b9706218c55d805957bb915e4d2527', class: `btn btn-${this.color}`, disabled: this.disabled, onClick: this.handleClick, onMouseMove: this.handleMouseMove, style: {
+        return (h("button", { key: 'c300bb3a6f9c9a348a5641fe0780a4936aa92a22', class: `btn btn-${this.color}`, disabled: this.disabled, onClick: this.handleClick, onMouseMove: this.handleMouseMove, style: {
                 '--x': `${this.mouseX}px`,
                 '--y': `${this.mouseY}px`
-            } }, this.texto));
+            } }, this.icon ? (h("span", { class: "icon-circle" }, this.renderIcon())) : null, h("span", { key: 'ad6762548f86e545f8ca04765c9e3a212d9a6e39', class: "btn-text" }, this.texto)));
     }
 };
 BotonPrimary.style = botonPrimaryCss;

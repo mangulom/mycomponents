@@ -1,0 +1,1 @@
+import{p as o,b as t}from"./p-CvtmycoX.js";export{s as setNonce}from"./p-CvtmycoX.js";import{g as r}from"./p-DQuL1Twl.js";var a=()=>{const t=import.meta.url;const r={};if(t!==""){r.resourcesUrl=new URL(".",t).href}return o(r)};a().then((async o=>{await r();return t([["p-1ae3752f",[[257,"boton-primary",{color:[1],disabled:[4],texto:[1],icon:[1],mouseX:[32],mouseY:[32]}]]]],o)}));
