@@ -1,11 +1,11 @@
-import { r as registerInstance, a as createEvent, h } from './index-DrWDGzri.js';
+import { r as registerInstance, c as createEvent, h } from './index-CvtmycoX.js';
 
 const botonPrimaryCss = "@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); :host{display:inline-block}.btn{position:relative;z-index:2;color:#fff;height:52px;width:auto;padding:0 24px;border-radius:8px;cursor:pointer;transition:transform 0.12s ease;font-size:0.95rem;overflow:hidden;border:1px solid rgba(255,255,255,0.9);font-family:'Poppins', sans-serif !important;display:inline-flex;align-items:center;justify-content:center;gap:12px;vertical-align:middle;line-height:52px;}.btn span,.btn .btn-text{display:flex;align-items:center;line-height:1}.btn::before{content:\"\";position:absolute;inset:3px;border-radius:6px;border:1px solid;z-index:1;pointer-events:none}.btn::after{content:\"\";position:absolute;top:calc(var(--y) - 40px);left:calc(var(--x) - 40px);width:80px;height:80px;background:radial-gradient(circle, rgba(255,255,255,0.22), rgba(255,255,255,0.02));border-radius:50%;pointer-events:none;transition:top 0.08s ease, left 0.08s ease, opacity 0.15s ease;z-index:0;opacity:0}.btn:hover::after{opacity:1}.btn:hover{transform:translateY(-2px)}.btn-light-blue{background:#009CDE}.btn-medium-blue{background:#0067B8}.btn-dark-blue{background:#003DA5}.btn-darker-blue{background:#00205B}.btn-light-blue::before,.btn-medium-blue::before,.btn-dark-blue::before,.btn-darker-blue::before{border-color:#ffffff}.icon-circle{width:28px;height:28px;border-radius:50%;background:#ffffff;color:#528cf8;display:flex;align-items:center;justify-content:center;flex-shrink:0;line-height:1;position:relative;top:0}";
 
 const BotonPrimary = class {
     constructor(hostRef) {
         registerInstance(this, hostRef);
-        this.clicked = createEvent(this, "clicked", 7);
+        this.clicked = createEvent(this, "clicked");
         this.color = 'medium-blue';
         this.disabled = false;
         this.texto = 'Aceptar';
@@ -42,4 +42,4 @@ const BotonPrimary = class {
 BotonPrimary.style = botonPrimaryCss;
 
 export { BotonPrimary as boton_primary };
-//# sourceMappingURL=boton-primary.entry.esm.js.map
+//# sourceMappingURL=boton-primary.entry.js.map

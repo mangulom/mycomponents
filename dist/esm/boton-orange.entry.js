@@ -1,11 +1,11 @@
-import { r as registerInstance, a as createEvent, h } from './index-DrWDGzri.js';
+import { r as registerInstance, c as createEvent, h } from './index-CvtmycoX.js';
 
 const botonOrangeCss = ":host{display:inline-block}.btn{--orange-light:#ffd699;--orange-medium:#ff7f50;--orange-dark:#cc5c33;--orange-darker:#80331a;position:relative;z-index:2;color:#fff;height:52px;width:auto;padding:0 24px;border-radius:8px;cursor:pointer;transition:transform 0.12s ease;font-size:0.95rem;overflow:hidden;border:1px solid rgba(0,0,0,0.4);font-family:'Poppins', sans-serif !important;display:inline-flex;align-items:center;justify-content:center;gap:12px;vertical-align:middle;line-height:52px}.btn span,.btn .btn-text{display:flex;align-items:center;line-height:1}.btn::before{content:\"\";position:absolute;inset:3px;border-radius:6px;border:1px solid;z-index:1;pointer-events:none}.btn::after{content:\"\";position:absolute;top:calc(var(--y) - 40px);left:calc(var(--x) - 40px);width:80px;height:80px;background:radial-gradient(circle, rgba(255,255,255,0.22), rgba(255,255,255,0.02));border-radius:50%;pointer-events:none;transition:top 0.08s ease, left 0.08s ease, opacity 0.15s ease;z-index:0;opacity:0}.btn:hover::after{opacity:1}.btn:hover:not(:disabled){filter:brightness(1.07);transform:translateY(-1px)}.btn-orange-ligth{background:var(--orange-light);border-color:var(--orange-light);color:#000}.btn-orange-medium{background:var(--orange-medium);border-color:var(--orange-medium);color:#fff}.btn-orange-dark{background:var(--orange-dark);border-color:var(--orange-dark);color:#fff}.btn-orange-darker{background:var(--orange-darker);border-color:var(--orange-darker);color:#fff}.btn:disabled{cursor:not-allowed;opacity:0.5;filter:none}.icon-circle{width:24px;height:24px;border-radius:50%;background:white;color:#cc5c33;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-right:6px;position:relative;top:0}.icon-circle svg{width:14px;height:14px}button{display:flex;align-items:center;justify-content:center;border:none;background:transparent;padding:0}";
 
 const BotonOrange = class {
     constructor(hostRef) {
         registerInstance(this, hostRef);
-        this.clicked = createEvent(this, "clicked", 7);
+        this.clicked = createEvent(this, "clicked");
         this.color = 'orange-medium';
         this.disabled = false;
         this.texto = 'Aceptar';
@@ -42,4 +42,4 @@ const BotonOrange = class {
 BotonOrange.style = botonOrangeCss;
 
 export { BotonOrange as boton_orange };
-//# sourceMappingURL=boton-orange.entry.esm.js.map
+//# sourceMappingURL=boton-orange.entry.js.map

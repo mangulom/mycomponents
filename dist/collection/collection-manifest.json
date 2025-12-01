@@ -1,0 +1,18 @@
+{
+  "entries": [
+    "components/boton-black/boton-black.js",
+    "components/boton-green/boton-green.js",
+    "components/boton-orange/boton-orange.js",
+    "components/boton-primary/boton-primary.js",
+    "components/boton-purple/boton-purple.js",
+    "components/boton-red/boton-red.js",
+    "components/boton-yellow/boton-yellow.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "4.38.3",
+    "typescriptVersion": "5.9.3"
+  },
+  "collections": [],
+  "bundles": []
+}

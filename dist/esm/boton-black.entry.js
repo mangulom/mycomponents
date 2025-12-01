@@ -1,11 +1,11 @@
-import { r as registerInstance, a as createEvent, h } from './index-DrWDGzri.js';
+import { r as registerInstance, c as createEvent, h } from './index-CvtmycoX.js';
 
 const botonBlackCss = ":host{display:inline-block}.btn{--black-light:#555555;--black-medium:#333333;--black-dark:#1a1a1a;--black-darker:#000000;position:relative;z-index:2;color:#fff;height:52px;width:auto;padding:0 24px;border-radius:8px;cursor:pointer;transition:transform 0.12s ease;font-size:0.95rem;overflow:hidden;border:1px solid rgba(0,0,0,0.4);font-family:'Poppins', sans-serif !important;display:inline-flex;align-items:center;justify-content:center;gap:12px;vertical-align:middle;line-height:52px}.btn span,.btn .btn-text{display:flex;align-items:center;line-height:1}.btn::before{content:\"\";position:absolute;inset:3px;border-radius:6px;border:1px solid;z-index:1;pointer-events:none}.btn::after{content:\"\";position:absolute;top:calc(var(--y) - 40px);left:calc(var(--x) - 40px);width:80px;height:80px;background:radial-gradient(circle, rgba(255,255,255,0.22), rgba(255,255,255,0.02));border-radius:50%;pointer-events:none;transition:top 0.08s ease, left 0.08s ease, opacity 0.15s ease;z-index:0;opacity:0}.btn:hover::after{opacity:1}.btn:hover:not(:disabled){filter:brightness(1.07);transform:translateY(-1px)}.btn-black-light{background:var(--black-light);border-color:var(--black-light);color:#fff}.btn-black-medium{background:var(--black-medium);border-color:var(--black-medium);color:#fff}.btn-black-dark{background:var(--black-dark);border-color:var(--black-dark);color:#fff}.btn-black-darker{background:var(--black-darker);border-color:var(--black-darker);color:#fff}.btn:disabled{cursor:not-allowed;opacity:0.5;filter:none}.icon-circle{width:24px;height:24px;border-radius:50%;background:white;color:#333333;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-right:6px;position:relative;top:0}.icon-circle svg{width:14px;height:14px}button{display:flex;align-items:center;justify-content:center;border:none;background:transparent;padding:0}";
 
 const BotonBlack = class {
     constructor(hostRef) {
         registerInstance(this, hostRef);
-        this.clicked = createEvent(this, "clicked", 7);
+        this.clicked = createEvent(this, "clicked");
         this.color = 'black-medium';
         this.disabled = false;
         this.texto = 'Aceptar';
@@ -42,4 +42,4 @@ const BotonBlack = class {
 BotonBlack.style = botonBlackCss;
 
 export { BotonBlack as boton_black };
-//# sourceMappingURL=boton-black.entry.esm.js.map
+//# sourceMappingURL=boton-black.entry.js.map
