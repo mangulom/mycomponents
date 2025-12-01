@@ -33,10 +33,10 @@ const BotonGreen = class {
         return null;
     }
     render() {
-        return (index.h("button", { key: '521c60c50cc060af306312b999d6eabac0d52f88', class: `btn btn-${this.color}`, disabled: this.disabled, onClick: this.handleClick, onMouseMove: this.handleMouseMove, style: {
+        return (index.h("button", { key: '33fc672153bc6f9aeb7577317418230361552408', class: `btn btn-${this.color}`, disabled: this.disabled, onClick: this.handleClick, onMouseMove: this.handleMouseMove, style: {
                 '--x': `${this.mouseX}px`,
                 '--y': `${this.mouseY}px`
-            } }, this.icon ? (index.h("span", { class: "icon-circle" }, this.renderIcon())) : null, index.h("span", { key: '2a17e958f77b16ce03f95d898c6e9d7209167f64', class: "btn-text" }, this.texto)));
+            } }, this.icon ? (index.h("span", { class: "icon-circle" }, this.renderIcon())) : null, index.h("span", { key: 'a9ebb675e8c22c28a6e78e320905078a540dda0b', class: "btn-text" }, this.texto)));
     }
 };
 BotonGreen.style = botonGreenCss;

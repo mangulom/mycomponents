@@ -6,6 +6,28 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface BotonBlack {
+        /**
+          * @default 'black-medium'
+         */
+        "color": | 'black-light'
+    | 'black-medium'
+    | 'black-dark'
+    | 'black-darker';
+        /**
+          * @default false
+         */
+        "disabled": boolean;
+        /**
+          * nombre del icono FA
+          * @default null
+         */
+        "icon": 'save' | null;
+        /**
+          * @default 'Aceptar'
+         */
+        "texto": string;
+    }
     interface BotonGreen {
         /**
           * @default 'green-medium'
@@ -27,6 +49,28 @@ export namespace Components {
          */
         "texto": string;
     }
+    interface BotonOrange {
+        /**
+          * @default 'orange-medium'
+         */
+        "color": | 'orange-ligth'
+    | 'orange-medium'
+    | 'orange-dark'
+    | 'orange-darker';
+        /**
+          * @default false
+         */
+        "disabled": boolean;
+        /**
+          * nombre del icono FA
+          * @default null
+         */
+        "icon": 'save' | null;
+        /**
+          * @default 'Aceptar'
+         */
+        "texto": string;
+    }
     interface BotonPrimary {
         /**
           * @default 'medium-blue'
@@ -35,6 +79,28 @@ export namespace Components {
     | 'medium-blue'
     | 'dark-blue'
     | 'darker-blue';
+        /**
+          * @default false
+         */
+        "disabled": boolean;
+        /**
+          * nombre del icono FA
+          * @default null
+         */
+        "icon": 'save' | null;
+        /**
+          * @default 'Aceptar'
+         */
+        "texto": string;
+    }
+    interface BotonPurple {
+        /**
+          * @default 'purple-medium'
+         */
+        "color": | 'purple-ligth'
+    | 'purple-medium'
+    | 'purple-dark'
+    | 'purple-darker';
         /**
           * @default false
          */
@@ -71,20 +137,75 @@ export namespace Components {
          */
         "texto": string;
     }
+    interface BotonYellow {
+        /**
+          * @default 'medium-yellow'
+         */
+        "color": | 'light-yellow'
+    | 'medium-yellow'
+    | 'dark-yellow'
+    | 'darker-yellow';
+        /**
+          * @default false
+         */
+        "disabled": boolean;
+        /**
+          * nombre del icono FA
+          * @default null
+         */
+        "icon": 'save' | null;
+        /**
+          * @default 'Aceptar'
+         */
+        "texto": string;
+    }
+}
+export interface BotonBlackCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLBotonBlackElement;
 }
 export interface BotonGreenCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLBotonGreenElement;
 }
+export interface BotonOrangeCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLBotonOrangeElement;
+}
 export interface BotonPrimaryCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLBotonPrimaryElement;
+}
+export interface BotonPurpleCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLBotonPurpleElement;
 }
 export interface BotonRedCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLBotonRedElement;
 }
+export interface BotonYellowCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLBotonYellowElement;
+}
 declare global {
+    interface HTMLBotonBlackElementEventMap {
+        "clicked": void;
+    }
+    interface HTMLBotonBlackElement extends Components.BotonBlack, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLBotonBlackElementEventMap>(type: K, listener: (this: HTMLBotonBlackElement, ev: BotonBlackCustomEvent<HTMLBotonBlackElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLBotonBlackElementEventMap>(type: K, listener: (this: HTMLBotonBlackElement, ev: BotonBlackCustomEvent<HTMLBotonBlackElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLBotonBlackElement: {
+        prototype: HTMLBotonBlackElement;
+        new (): HTMLBotonBlackElement;
+    };
     interface HTMLBotonGreenElementEventMap {
         "clicked": void;
     }
@@ -101,6 +222,23 @@ declare global {
     var HTMLBotonGreenElement: {
         prototype: HTMLBotonGreenElement;
         new (): HTMLBotonGreenElement;
+    };
+    interface HTMLBotonOrangeElementEventMap {
+        "clicked": void;
+    }
+    interface HTMLBotonOrangeElement extends Components.BotonOrange, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLBotonOrangeElementEventMap>(type: K, listener: (this: HTMLBotonOrangeElement, ev: BotonOrangeCustomEvent<HTMLBotonOrangeElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLBotonOrangeElementEventMap>(type: K, listener: (this: HTMLBotonOrangeElement, ev: BotonOrangeCustomEvent<HTMLBotonOrangeElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLBotonOrangeElement: {
+        prototype: HTMLBotonOrangeElement;
+        new (): HTMLBotonOrangeElement;
     };
     interface HTMLBotonPrimaryElementEventMap {
         "clicked": void;
@@ -119,6 +257,23 @@ declare global {
         prototype: HTMLBotonPrimaryElement;
         new (): HTMLBotonPrimaryElement;
     };
+    interface HTMLBotonPurpleElementEventMap {
+        "clicked": void;
+    }
+    interface HTMLBotonPurpleElement extends Components.BotonPurple, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLBotonPurpleElementEventMap>(type: K, listener: (this: HTMLBotonPurpleElement, ev: BotonPurpleCustomEvent<HTMLBotonPurpleElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLBotonPurpleElementEventMap>(type: K, listener: (this: HTMLBotonPurpleElement, ev: BotonPurpleCustomEvent<HTMLBotonPurpleElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLBotonPurpleElement: {
+        prototype: HTMLBotonPurpleElement;
+        new (): HTMLBotonPurpleElement;
+    };
     interface HTMLBotonRedElementEventMap {
         "clicked": void;
     }
@@ -136,13 +291,57 @@ declare global {
         prototype: HTMLBotonRedElement;
         new (): HTMLBotonRedElement;
     };
+    interface HTMLBotonYellowElementEventMap {
+        "clicked": void;
+    }
+    interface HTMLBotonYellowElement extends Components.BotonYellow, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLBotonYellowElementEventMap>(type: K, listener: (this: HTMLBotonYellowElement, ev: BotonYellowCustomEvent<HTMLBotonYellowElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLBotonYellowElementEventMap>(type: K, listener: (this: HTMLBotonYellowElement, ev: BotonYellowCustomEvent<HTMLBotonYellowElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLBotonYellowElement: {
+        prototype: HTMLBotonYellowElement;
+        new (): HTMLBotonYellowElement;
+    };
     interface HTMLElementTagNameMap {
+        "boton-black": HTMLBotonBlackElement;
         "boton-green": HTMLBotonGreenElement;
+        "boton-orange": HTMLBotonOrangeElement;
         "boton-primary": HTMLBotonPrimaryElement;
+        "boton-purple": HTMLBotonPurpleElement;
         "boton-red": HTMLBotonRedElement;
+        "boton-yellow": HTMLBotonYellowElement;
     }
 }
 declare namespace LocalJSX {
+    interface BotonBlack {
+        /**
+          * @default 'black-medium'
+         */
+        "color"?: | 'black-light'
+    | 'black-medium'
+    | 'black-dark'
+    | 'black-darker';
+        /**
+          * @default false
+         */
+        "disabled"?: boolean;
+        /**
+          * nombre del icono FA
+          * @default null
+         */
+        "icon"?: 'save' | null;
+        "onClicked"?: (event: BotonBlackCustomEvent<void>) => void;
+        /**
+          * @default 'Aceptar'
+         */
+        "texto"?: string;
+    }
     interface BotonGreen {
         /**
           * @default 'green-medium'
@@ -160,6 +359,29 @@ declare namespace LocalJSX {
          */
         "icon"?: 'save' | null;
         "onClicked"?: (event: BotonGreenCustomEvent<void>) => void;
+        /**
+          * @default 'Aceptar'
+         */
+        "texto"?: string;
+    }
+    interface BotonOrange {
+        /**
+          * @default 'orange-medium'
+         */
+        "color"?: | 'orange-ligth'
+    | 'orange-medium'
+    | 'orange-dark'
+    | 'orange-darker';
+        /**
+          * @default false
+         */
+        "disabled"?: boolean;
+        /**
+          * nombre del icono FA
+          * @default null
+         */
+        "icon"?: 'save' | null;
+        "onClicked"?: (event: BotonOrangeCustomEvent<void>) => void;
         /**
           * @default 'Aceptar'
          */
@@ -188,6 +410,29 @@ declare namespace LocalJSX {
          */
         "texto"?: string;
     }
+    interface BotonPurple {
+        /**
+          * @default 'purple-medium'
+         */
+        "color"?: | 'purple-ligth'
+    | 'purple-medium'
+    | 'purple-dark'
+    | 'purple-darker';
+        /**
+          * @default false
+         */
+        "disabled"?: boolean;
+        /**
+          * nombre del icono FA
+          * @default null
+         */
+        "icon"?: 'save' | null;
+        "onClicked"?: (event: BotonPurpleCustomEvent<void>) => void;
+        /**
+          * @default 'Aceptar'
+         */
+        "texto"?: string;
+    }
     interface BotonRed {
         /**
           * @default 'medium-red'
@@ -211,19 +456,50 @@ declare namespace LocalJSX {
          */
         "texto"?: string;
     }
+    interface BotonYellow {
+        /**
+          * @default 'medium-yellow'
+         */
+        "color"?: | 'light-yellow'
+    | 'medium-yellow'
+    | 'dark-yellow'
+    | 'darker-yellow';
+        /**
+          * @default false
+         */
+        "disabled"?: boolean;
+        /**
+          * nombre del icono FA
+          * @default null
+         */
+        "icon"?: 'save' | null;
+        "onClicked"?: (event: BotonYellowCustomEvent<void>) => void;
+        /**
+          * @default 'Aceptar'
+         */
+        "texto"?: string;
+    }
     interface IntrinsicElements {
+        "boton-black": BotonBlack;
         "boton-green": BotonGreen;
+        "boton-orange": BotonOrange;
         "boton-primary": BotonPrimary;
+        "boton-purple": BotonPurple;
         "boton-red": BotonRed;
+        "boton-yellow": BotonYellow;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "boton-black": LocalJSX.BotonBlack & JSXBase.HTMLAttributes<HTMLBotonBlackElement>;
             "boton-green": LocalJSX.BotonGreen & JSXBase.HTMLAttributes<HTMLBotonGreenElement>;
+            "boton-orange": LocalJSX.BotonOrange & JSXBase.HTMLAttributes<HTMLBotonOrangeElement>;
             "boton-primary": LocalJSX.BotonPrimary & JSXBase.HTMLAttributes<HTMLBotonPrimaryElement>;
+            "boton-purple": LocalJSX.BotonPurple & JSXBase.HTMLAttributes<HTMLBotonPurpleElement>;
             "boton-red": LocalJSX.BotonRed & JSXBase.HTMLAttributes<HTMLBotonRedElement>;
+            "boton-yellow": LocalJSX.BotonYellow & JSXBase.HTMLAttributes<HTMLBotonYellowElement>;
         }
     }
 }

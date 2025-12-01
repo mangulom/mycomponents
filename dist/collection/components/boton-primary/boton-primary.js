@@ -28,10 +28,10 @@ export class BotonPrimary {
         return null;
     }
     render() {
-        return (h("button", { key: 'c300bb3a6f9c9a348a5641fe0780a4936aa92a22', class: `btn btn-${this.color}`, disabled: this.disabled, onClick: this.handleClick, onMouseMove: this.handleMouseMove, style: {
+        return (h("button", { key: '4f841ad6cc9236f0c82dad486a1f2c8ff46505c4', class: `btn btn-${this.color}`, disabled: this.disabled, onClick: this.handleClick, onMouseMove: this.handleMouseMove, style: {
                 '--x': `${this.mouseX}px`,
                 '--y': `${this.mouseY}px`
-            } }, this.icon ? (h("span", { class: "icon-circle" }, this.renderIcon())) : null, h("span", { key: 'ad6762548f86e545f8ca04765c9e3a212d9a6e39', class: "btn-text" }, this.texto)));
+            } }, this.icon ? (h("span", { class: "icon-circle" }, this.renderIcon())) : null, h("span", { key: '7c4a548796a291fe9a316272125ba11229ef347e', class: "btn-text" }, this.texto)));
     }
     static get is() { return "boton-primary"; }
     static get encapsulation() { return "shadow"; }

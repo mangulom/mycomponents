@@ -37,10 +37,10 @@ const BotonPrimary = /*@__PURE__*/ proxyCustomElement(class BotonPrimary extends
         return null;
     }
     render() {
-        return (h("button", { key: '8c0e0ef3d848e26586d3128a68db61c95c0c6dd2', class: `btn btn-${this.color}`, disabled: this.disabled, onClick: this.handleClick, onMouseMove: this.handleMouseMove, style: {
+        return (h("button", { key: '756b014b04d71f94d69a5b2ced29387fee496e57', class: `btn btn-${this.color}`, disabled: this.disabled, onClick: this.handleClick, onMouseMove: this.handleMouseMove, style: {
                 '--x': `${this.mouseX}px`,
                 '--y': `${this.mouseY}px`
-            } }, this.icon ? (h("span", { class: "icon-circle" }, this.renderIcon())) : null, h("span", { key: '0063abcda4015cf1a4e4fb2c0d82d6ff06e0192c', class: "btn-text" }, this.texto)));
+            } }, this.icon ? (h("span", { class: "icon-circle" }, this.renderIcon())) : null, h("span", { key: '2bbe3e836a168da4063e1e23175b39d40a943ec7', class: "btn-text" }, this.texto)));
     }
     static get style() { return botonRedCss; }
 }, [257, "boton-red", {
