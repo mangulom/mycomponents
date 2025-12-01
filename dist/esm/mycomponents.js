@@ -1,6 +1,5 @@
-import { p as promiseResolve, b as bootstrapLazy } from './index-CvtmycoX.js';
-export { s as setNonce } from './index-CvtmycoX.js';
-import { g as globalScripts } from './app-globals-DQuL1Twl.js';
+import { p as promiseResolve, g as globalScripts, b as bootstrapLazy } from './index-BFspBUOL.js';
+export { s as setNonce } from './index-BFspBUOL.js';
 
 /*
  Stencil Client Patch Browser v4.38.3 | MIT Licensed | https://stenciljs.com

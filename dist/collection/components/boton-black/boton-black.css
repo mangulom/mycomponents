@@ -1,18 +1,24 @@
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 :host {
   display: inline-block;
 }
 
+/* base */
 .btn {
-  --black-light: #555555;     /* gris oscuro suave */
-  --black-medium: #333333;    /* Pantone Black elegante */
-  --black-dark: #1a1a1a;      /* más profundo */
-  --black-darker: #000000;    /* negro puro */
-
   position: relative;
   z-index: 2;
   color: #fff;
 
+  /* ALTURA FIJA PARA TODOS */
   height: 52px;
+
+  /* ANCHO AUTOMÁTICO – SE ADAPTA AL TEXTO Y AL CÍRCULO */
   width: auto;
 
   padding: 0 24px;
@@ -21,18 +27,21 @@
   transition: transform 0.12s ease;
   font-size: 0.95rem;
   overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.9);
   font-family: 'Poppins', sans-serif !important;
 
-  display: inline-flex;
-  align-items: center;
+  /* ALINEACIÓN PERFECTA */
+  display: inline-flex;          /* NO flex normal → evita desalineación */
+  align-items: center;           /* centra verticalmente */
   justify-content: center;
   gap: 12px;
 
+  /* FIX DEFINITIVO: elimina cualquier desplazamiento vertical */
   vertical-align: middle;
-  line-height: 52px;
+  line-height: 52px;             /* igual a la altura del botón */
 }
 
+/* FIX: El texto debe tener line-height normal para no descentrar el círculo */
 .btn span,
 .btn .btn-text {
   display: flex;
@@ -40,6 +49,7 @@
   line-height: 1;
 }
 
+/* borde interior */
 .btn::before {
   content: "";
   position: absolute;
@@ -50,6 +60,7 @@
   pointer-events: none;
 }
 
+/* brillo */
 .btn::after {
   content: "";
   position: absolute;
@@ -66,70 +77,38 @@
 }
 
 .btn:hover::after { opacity: 1; }
-.btn:hover:not(:disabled) {
-  filter: brightness(1.07);
-  transform: translateY(-1px);
+.btn:hover { transform: translateY(-2px); }
+
+/* COLORES */
+.btn-light-black { background: #555555; }
+.btn-medium-black { background: #333333; }
+.btn-dark-black { background: #1a1a1a; }
+.btn-darker-black { background: #000000; }
+
+/* rectángulo interior blanco para TODOS */
+.btn-light-black::before,
+.btn-medium-black::before,
+.btn-dark-black::before,
+.btn-darker-black::before {
+  border-color: #ffffff;
 }
 
-/* Variantes */
-.btn-black-light {
-  background: var(--black-light);
-  border-color: var(--black-light);
-  color: #fff;
-}
-
-.btn-black-medium {
-  background: var(--black-medium);
-  border-color: var(--black-medium);
-  color: #fff;
-}
-
-.btn-black-dark {
-  background: var(--black-dark);
-  border-color: var(--black-dark);
-  color: #fff;
-}
-
-.btn-black-darker {
-  background: var(--black-darker);
-  border-color: var(--black-darker);
-  color: #fff;
-}
-
-/* Disabled */
-.btn:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-  filter: none;
-}
-
-/* ICONO EN CÍRCULO */
+/* CÍRCULO DEL ICONO */
 .icon-circle {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  background: white;
-  color: #333333;
+  background: #ffffff;
+  color: #000000; /* azul oscuro */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  margin-right: 6px;
+
+  /* FIX DEFINITIVO: centra perfecto el ícono */
+  line-height: 1;
+
+  /* elimina cualquier desplazamiento interno */
   position: relative;
   top: 0;
-}
-
-.icon-circle svg {
-  width: 14px;
-  height: 14px;
-}
-
-/* Centrado real del contenido */
-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  background: transparent;
-  padding: 0;
 }

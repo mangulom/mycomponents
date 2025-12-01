@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 :host {
   display: inline-block;
 }
@@ -106,8 +112,8 @@
 
 /* Icono en círculo blanco */
 .icon-circle {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: white;
   color: var(--green-medium);

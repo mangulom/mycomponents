@@ -8,12 +8,12 @@ import { HTMLStencilElement, JSXBase } from "./stencil-public-runtime";
 export namespace Components {
     interface BotonBlack {
         /**
-          * @default 'black-medium'
+          * @default 'medium-black'
          */
-        "color": | 'black-light'
-    | 'black-medium'
-    | 'black-dark'
-    | 'black-darker';
+        "color": | 'light-black'
+    | 'medium-black'
+    | 'dark-black'
+    | 'darker-black';
         /**
           * @default false
          */
@@ -22,7 +22,7 @@ export namespace Components {
           * nombre del icono FA
           * @default null
          */
-        "icon": 'save' | null;
+        "icon": 'save' | 'new' | 'edit' | 'delete' | 'pdf' | 'excel' | 'view' | 'search' | 'filter' | 'undo' | null;
         /**
           * @default 'Aceptar'
          */
@@ -43,7 +43,7 @@ export namespace Components {
         /**
           * @default null
          */
-        "icon": 'save' | null;
+        "icon": 'save' | 'new' | 'edit' | 'delete' | 'pdf' | 'excel' | 'view' | 'search' | 'filter' | 'undo' | null;
         /**
           * @default 'Aceptar'
          */
@@ -65,7 +65,7 @@ export namespace Components {
           * nombre del icono FA
           * @default null
          */
-        "icon": 'save' | null;
+        "icon": 'save' | 'new' | 'edit' | 'delete' | 'pdf' | 'excel' | 'view' | 'search' | 'filter' | 'undo' | null;
         /**
           * @default 'Aceptar'
          */
@@ -87,7 +87,7 @@ export namespace Components {
           * nombre del icono FA
           * @default null
          */
-        "icon": 'save' | null;
+        "icon": 'save' | 'new' | 'edit' | 'delete' | 'pdf' | 'excel' | 'view' | 'search' | 'filter' | 'undo' | null;
         /**
           * @default 'Aceptar'
          */
@@ -98,9 +98,9 @@ export namespace Components {
           * @default 'medium-purple'
          */
         "color": | 'light-purple'
-  | 'medium-purple'
-  | 'dark-purple'
-  | 'darker-purple';
+    | 'medium-purple'
+    | 'dark-purple'
+    | 'darker-purple';
         /**
           * @default false
          */
@@ -109,7 +109,7 @@ export namespace Components {
           * nombre del icono FA
           * @default null
          */
-        "icon": 'save' | null;
+        "icon": 'save' | 'new' | 'edit' | 'delete' | 'pdf' | 'excel' | 'view' | 'search' | 'filter' | 'undo' | null;
         /**
           * @default 'Aceptar'
          */
@@ -131,7 +131,7 @@ export namespace Components {
           * nombre del icono FA
           * @default null
          */
-        "icon": 'save' | null;
+        "icon": 'save' | 'new' | 'edit' | 'delete' | 'pdf' | 'excel' | 'view' | 'search' | 'filter' | 'undo' | null;
         /**
           * @default 'Aceptar'
          */
@@ -153,7 +153,7 @@ export namespace Components {
           * nombre del icono FA
           * @default null
          */
-        "icon": 'save' | null;
+        "icon": 'save' | 'new' | 'edit' | 'delete' | 'pdf' | 'excel' | 'view' | 'search' | 'filter' | 'undo' | null;
         /**
           * @default 'Aceptar'
          */
@@ -321,12 +321,12 @@ declare global {
 declare namespace LocalJSX {
     interface BotonBlack {
         /**
-          * @default 'black-medium'
+          * @default 'medium-black'
          */
-        "color"?: | 'black-light'
-    | 'black-medium'
-    | 'black-dark'
-    | 'black-darker';
+        "color"?: | 'light-black'
+    | 'medium-black'
+    | 'dark-black'
+    | 'darker-black';
         /**
           * @default false
          */
@@ -335,7 +335,7 @@ declare namespace LocalJSX {
           * nombre del icono FA
           * @default null
          */
-        "icon"?: 'save' | null;
+        "icon"?: 'save' | 'new' | 'edit' | 'delete' | 'pdf' | 'excel' | 'view' | 'search' | 'filter' | 'undo' | null;
         "onClicked"?: (event: BotonBlackCustomEvent<void>) => void;
         /**
           * @default 'Aceptar'
@@ -357,7 +357,7 @@ declare namespace LocalJSX {
         /**
           * @default null
          */
-        "icon"?: 'save' | null;
+        "icon"?: 'save' | 'new' | 'edit' | 'delete' | 'pdf' | 'excel' | 'view' | 'search' | 'filter' | 'undo' | null;
         "onClicked"?: (event: BotonGreenCustomEvent<void>) => void;
         /**
           * @default 'Aceptar'
@@ -380,7 +380,7 @@ declare namespace LocalJSX {
           * nombre del icono FA
           * @default null
          */
-        "icon"?: 'save' | null;
+        "icon"?: 'save' | 'new' | 'edit' | 'delete' | 'pdf' | 'excel' | 'view' | 'search' | 'filter' | 'undo' | null;
         "onClicked"?: (event: BotonOrangeCustomEvent<void>) => void;
         /**
           * @default 'Aceptar'
@@ -403,7 +403,7 @@ declare namespace LocalJSX {
           * nombre del icono FA
           * @default null
          */
-        "icon"?: 'save' | null;
+        "icon"?: 'save' | 'new' | 'edit' | 'delete' | 'pdf' | 'excel' | 'view' | 'search' | 'filter' | 'undo' | null;
         "onClicked"?: (event: BotonPrimaryCustomEvent<void>) => void;
         /**
           * @default 'Aceptar'
@@ -415,9 +415,9 @@ declare namespace LocalJSX {
           * @default 'medium-purple'
          */
         "color"?: | 'light-purple'
-  | 'medium-purple'
-  | 'dark-purple'
-  | 'darker-purple';
+    | 'medium-purple'
+    | 'dark-purple'
+    | 'darker-purple';
         /**
           * @default false
          */
@@ -426,7 +426,7 @@ declare namespace LocalJSX {
           * nombre del icono FA
           * @default null
          */
-        "icon"?: 'save' | null;
+        "icon"?: 'save' | 'new' | 'edit' | 'delete' | 'pdf' | 'excel' | 'view' | 'search' | 'filter' | 'undo' | null;
         "onClicked"?: (event: BotonPurpleCustomEvent<void>) => void;
         /**
           * @default 'Aceptar'
@@ -449,7 +449,7 @@ declare namespace LocalJSX {
           * nombre del icono FA
           * @default null
          */
-        "icon"?: 'save' | null;
+        "icon"?: 'save' | 'new' | 'edit' | 'delete' | 'pdf' | 'excel' | 'view' | 'search' | 'filter' | 'undo' | null;
         "onClicked"?: (event: BotonRedCustomEvent<void>) => void;
         /**
           * @default 'Aceptar'
@@ -472,7 +472,7 @@ declare namespace LocalJSX {
           * nombre del icono FA
           * @default null
          */
-        "icon"?: 'save' | null;
+        "icon"?: 'save' | 'new' | 'edit' | 'delete' | 'pdf' | 'excel' | 'view' | 'search' | 'filter' | 'undo' | null;
         "onClicked"?: (event: BotonYellowCustomEvent<void>) => void;
         /**
           * @default 'Aceptar'

@@ -4,13 +4,12 @@ export declare class BotonPurple {
     disabled: boolean;
     texto: string;
     /** nombre del icono FA */
-    icon: 'save' | null;
+    icon: 'save' | 'new' | 'edit' | 'delete' | 'pdf' | 'excel' | 'view' | 'search' | 'filter' | 'undo' | null;
     clicked: EventEmitter<void>;
     mouseX: number;
     mouseY: number;
     private handleClick;
     private handleMouseMove;
-    /** SVG real en Shadow DOM */
     private renderIcon;
     render(): any;
 }
