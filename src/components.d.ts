@@ -95,12 +95,12 @@ export namespace Components {
     }
     interface BotonPurple {
         /**
-          * @default 'purple-medium'
+          * @default 'medium-purple'
          */
-        "color": | 'purple-ligth'
-    | 'purple-medium'
-    | 'purple-dark'
-    | 'purple-darker';
+        "color": | 'light-purple'
+  | 'medium-purple'
+  | 'dark-purple'
+  | 'darker-purple';
         /**
           * @default false
          */
@@ -412,12 +412,12 @@ declare namespace LocalJSX {
     }
     interface BotonPurple {
         /**
-          * @default 'purple-medium'
+          * @default 'medium-purple'
          */
-        "color"?: | 'purple-ligth'
-    | 'purple-medium'
-    | 'purple-dark'
-    | 'purple-darker';
+        "color"?: | 'light-purple'
+  | 'medium-purple'
+  | 'dark-purple'
+  | 'darker-purple';
         /**
           * @default false
          */

@@ -33,10 +33,10 @@ const BotonPrimary = class {
         return null;
     }
     render() {
-        return (h("button", { key: 'fbc8d058bf2569bf3a07fe8f5241258fa08b5210', class: `btn btn-${this.color}`, disabled: this.disabled, onClick: this.handleClick, onMouseMove: this.handleMouseMove, style: {
+        return (h("button", { key: '4f841ad6cc9236f0c82dad486a1f2c8ff46505c4', class: `btn btn-${this.color}`, disabled: this.disabled, onClick: this.handleClick, onMouseMove: this.handleMouseMove, style: {
                 '--x': `${this.mouseX}px`,
                 '--y': `${this.mouseY}px`
-            } }, this.icon ? (h("span", { class: "icon-circle" }, this.renderIcon())) : null, h("span", { key: 'aea7b8bf087a4e772909bcc7531e77e30803b404', class: "btn-text" }, this.texto)));
+            } }, this.icon ? (h("span", { class: "icon-circle" }, this.renderIcon())) : null, h("span", { key: '7c4a548796a291fe9a316272125ba11229ef347e', class: "btn-text" }, this.texto)));
     }
 };
 BotonPrimary.style = botonPrimaryCss;

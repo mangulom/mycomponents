@@ -7,11 +7,11 @@ import { Component, Prop, Event, EventEmitter, h, State } from '@stencil/core';
 })
 export class BotonPurple {
 
-  @Prop() color:
-    | 'purple-ligth'
-    | 'purple-medium'
-    | 'purple-dark'
-    | 'purple-darker' = 'purple-medium';
+@Prop() color:
+  | 'light-purple'
+  | 'medium-purple'
+  | 'dark-purple'
+  | 'darker-purple' = 'medium-purple';
 
   @Prop() disabled: boolean = false;
   @Prop() texto: string = 'Aceptar';

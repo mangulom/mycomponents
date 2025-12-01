@@ -72,25 +72,25 @@
 }
 
 /* Variantes */
-.btn-light-orange {
+.btn-orange-ligth {
   background: var(--orange-light);
   border-color: var(--orange-light);
   color: #000;
 }
 
-.btn-medium-orange {
+.btn-orange-medium {
   background: var(--orange-medium);
   border-color: var(--orange-medium);
   color: #fff;
 }
 
-.btn-dark-orange {
+.btn-orange-dark {
   background: var(--orange-dark);
   border-color: var(--orange-dark);
   color: #fff;
 }
 
-.btn-darker-orange {
+.btn-orange-darker {
   background: var(--orange-darker);
   border-color: var(--orange-darker);
   color: #fff;

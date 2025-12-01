@@ -1,6 +1,6 @@
 import { EventEmitter } from '../../stencil-public-runtime';
 export declare class BotonPurple {
-    color: 'purple-ligth' | 'purple-medium' | 'purple-dark' | 'purple-darker';
+    color: 'light-purple' | 'medium-purple' | 'dark-purple' | 'darker-purple';
     disabled: boolean;
     texto: string;
     /** nombre del icono FA */

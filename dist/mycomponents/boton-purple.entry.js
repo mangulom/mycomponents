@@ -1,12 +1,12 @@
 import { r as registerInstance, a as createEvent, h } from './index-DrWDGzri.js';
 
-const botonPurpleCss = ":host{display:inline-block}.btn{--purple-light:#e0c3fc;--purple-medium:#9b59b6;--purple-dark:#6c3483;--purple-darker:#4a235a;position:relative;z-index:2;color:#fff;height:52px;width:auto;padding:0 24px;border-radius:8px;cursor:pointer;transition:transform 0.12s ease;font-size:0.95rem;overflow:hidden;border:1px solid rgba(0,0,0,0.4);font-family:'Poppins', sans-serif !important;display:inline-flex;align-items:center;justify-content:center;gap:12px;vertical-align:middle;line-height:52px}.btn span,.btn .btn-text{display:flex;align-items:center;line-height:1}.btn::before{content:\"\";position:absolute;inset:3px;border-radius:6px;border:1px solid;z-index:1;pointer-events:none}.btn::after{content:\"\";position:absolute;top:calc(var(--y) - 40px);left:calc(var(--x) - 40px);width:80px;height:80px;background:radial-gradient(circle, rgba(255,255,255,0.22), rgba(255,255,255,0.02));border-radius:50%;pointer-events:none;transition:top 0.08s ease, left 0.08s ease, opacity 0.15s ease;z-index:0;opacity:0}.btn:hover::after{opacity:1}.btn:hover:not(:disabled){filter:brightness(1.07);transform:translateY(-1px)}.btn-light-purple{background:var(--purple-light);border-color:var(--purple-light);color:#000}.btn-medium-purple{background:var(--purple-medium);border-color:var(--purple-medium);color:#fff}.btn-dark-purple{background:var(--purple-dark);border-color:var(--purple-dark);color:#fff}.btn-darker-purple{background:var(--purple-darker);border-color:var(--purple-darker);color:#fff}.btn:disabled{cursor:not-allowed;opacity:0.5;filter:none}.icon-circle{width:24px;height:24px;border-radius:50%;background:white;color:#6c3483;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-right:6px;position:relative;top:0}.icon-circle svg{width:14px;height:14px}button{display:flex;align-items:center;justify-content:center;border:none;background:transparent;padding:0}";
+const botonPurpleCss = ":host{display:inline-block}.btn{--purple-light:#e0c3fc;--purple-medium:#9b59b6;--purple-dark:#6c3483;--purple-darker:#4a235a;position:relative;z-index:2;color:#fff;height:52px;width:auto;padding:0 24px;border-radius:8px;cursor:pointer;transition:transform 0.12s ease;font-size:0.95rem;overflow:hidden;border:1px solid rgba(0,0,0,0.4);font-family:'Poppins', sans-serif !important;display:inline-flex;align-items:center;justify-content:center;gap:12px;vertical-align:middle;line-height:52px}.btn span,.btn .btn-text{display:flex;align-items:center;line-height:1}.btn::before{content:\"\";position:absolute;inset:3px;border-radius:6px;border:1px solid;z-index:1;pointer-events:none}.btn::after{content:\"\";position:absolute;top:calc(var(--y) - 40px);left:calc(var(--x) - 40px);width:80px;height:80px;background:radial-gradient(circle, rgba(255,255,255,0.22), rgba(255,255,255,0.02));border-radius:50%;pointer-events:none;transition:top 0.08s ease, left 0.08s ease, opacity 0.15s ease;z-index:0;opacity:0}.btn:hover::after{opacity:1}.btn:hover:not(:disabled){filter:brightness(1.07);transform:translateY(-1px)}.btn-purple-light{background:var(--purple-light);border-color:var(--purple-light);color:#000}.btn-purple-medium{background:var(--purple-medium);border-color:var(--purple-medium);color:#fff}.btn-purple-dark{background:var(--purple-dark);border-color:var(--purple-dark);color:#fff}.btn-purple-darker{background:var(--purple-darker);border-color:var(--purple-darker);color:#fff}.btn:disabled{cursor:not-allowed;opacity:0.5;filter:none}.icon-circle{width:24px;height:24px;border-radius:50%;background:white;color:#6c3483;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-right:6px;position:relative;top:0}.icon-circle svg{width:14px;height:14px}button{display:flex;align-items:center;justify-content:center;border:none;background:transparent;padding:0}";
 
 const BotonPurple = class {
     constructor(hostRef) {
         registerInstance(this, hostRef);
         this.clicked = createEvent(this, "clicked", 7);
-        this.color = 'purple-medium';
+        this.color = 'medium-purple';
         this.disabled = false;
         this.texto = 'Aceptar';
         /** nombre del icono FA */
@@ -33,10 +33,10 @@ const BotonPurple = class {
         return null;
     }
     render() {
-        return (h("button", { key: '9be8fd1a32484e9c78bd4adc4826249599274b51', class: `btn btn-${this.color}`, disabled: this.disabled, onClick: this.handleClick, onMouseMove: this.handleMouseMove, style: {
+        return (h("button", { key: 'bc2a69834ef7068aa507c0a6ff8fb8c1be851c2f', class: `btn btn-${this.color}`, disabled: this.disabled, onClick: this.handleClick, onMouseMove: this.handleMouseMove, style: {
                 '--x': `${this.mouseX}px`,
                 '--y': `${this.mouseY}px`
-            } }, this.icon ? (h("span", { class: "icon-circle" }, this.renderIcon())) : null, h("span", { key: '08e061d3391a5c0a5e76dad2331fe2d44559fff4', class: "btn-text" }, this.texto)));
+            } }, this.icon ? (h("span", { class: "icon-circle" }, this.renderIcon())) : null, h("span", { key: 'aac40064a27884ca23605a05f0be7d9a1ebefb77', class: "btn-text" }, this.texto)));
     }
 };
 BotonPurple.style = botonPurpleCss;

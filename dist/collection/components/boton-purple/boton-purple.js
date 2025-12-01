@@ -1,7 +1,7 @@
 import { h } from "@stencil/core";
 export class BotonPurple {
     constructor() {
-        this.color = 'purple-medium';
+        this.color = 'medium-purple';
         this.disabled = false;
         this.texto = 'Aceptar';
         /** nombre del icono FA */
@@ -28,10 +28,10 @@ export class BotonPurple {
         return null;
     }
     render() {
-        return (h("button", { key: '1e1dc579348dfea834777cb4cdb8ed19d47fff8f', class: `btn btn-${this.color}`, disabled: this.disabled, onClick: this.handleClick, onMouseMove: this.handleMouseMove, style: {
+        return (h("button", { key: 'bc2a69834ef7068aa507c0a6ff8fb8c1be851c2f', class: `btn btn-${this.color}`, disabled: this.disabled, onClick: this.handleClick, onMouseMove: this.handleMouseMove, style: {
                 '--x': `${this.mouseX}px`,
                 '--y': `${this.mouseY}px`
-            } }, this.icon ? (h("span", { class: "icon-circle" }, this.renderIcon())) : null, h("span", { key: 'a9d2a9c7ab501aa3edb54ad00bf924c9219731ad', class: "btn-text" }, this.texto)));
+            } }, this.icon ? (h("span", { class: "icon-circle" }, this.renderIcon())) : null, h("span", { key: 'aac40064a27884ca23605a05f0be7d9a1ebefb77', class: "btn-text" }, this.texto)));
     }
     static get is() { return "boton-purple"; }
     static get encapsulation() { return "shadow"; }
@@ -51,8 +51,8 @@ export class BotonPurple {
                 "type": "string",
                 "mutable": false,
                 "complexType": {
-                    "original": "| 'purple-ligth'\r\n    | 'purple-medium'\r\n    | 'purple-dark'\r\n    | 'purple-darker'",
-                    "resolved": "\"purple-dark\" | \"purple-darker\" | \"purple-ligth\" | \"purple-medium\"",
+                    "original": "| 'light-purple'\r\n  | 'medium-purple'\r\n  | 'dark-purple'\r\n  | 'darker-purple'",
+                    "resolved": "\"dark-purple\" | \"darker-purple\" | \"light-purple\" | \"medium-purple\"",
                     "references": {}
                 },
                 "required": false,
@@ -65,7 +65,7 @@ export class BotonPurple {
                 "setter": false,
                 "reflect": false,
                 "attribute": "color",
-                "defaultValue": "'purple-medium'"
+                "defaultValue": "'medium-purple'"
             },
             "disabled": {
                 "type": "boolean",

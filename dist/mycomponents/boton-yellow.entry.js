@@ -33,10 +33,10 @@ const BotonYellow = class {
         return null;
     }
     render() {
-        return (h("button", { key: '4bb5d6d6c741ec08f41e05e069771883474b8af3', class: `btn btn-${this.color}`, disabled: this.disabled, onClick: this.handleClick, onMouseMove: this.handleMouseMove, style: {
+        return (h("button", { key: 'c46ee1f7c4392b8e8d6808c46d97404408d72024', class: `btn btn-${this.color}`, disabled: this.disabled, onClick: this.handleClick, onMouseMove: this.handleMouseMove, style: {
                 '--x': `${this.mouseX}px`,
                 '--y': `${this.mouseY}px`
-            } }, this.icon ? (h("span", { class: "icon-circle" }, this.renderIcon())) : null, h("span", { key: '39e888b035f1af70f5eea85a257e7f66e51c1cec', class: "btn-text" }, this.texto)));
+            } }, this.icon ? (h("span", { class: "icon-circle" }, this.renderIcon())) : null, h("span", { key: 'fef414a98bab13a0edcdd4f37b3658af984579b1', class: "btn-text" }, this.texto)));
     }
 };
 BotonYellow.style = botonYellowCss;

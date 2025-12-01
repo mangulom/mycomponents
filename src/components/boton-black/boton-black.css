@@ -72,25 +72,25 @@
 }
 
 /* Variantes */
-.btn-light-black {
+.btn-black-light {
   background: var(--black-light);
   border-color: var(--black-light);
   color: #fff;
 }
 
-.btn-medium-black {
+.btn-black-medium {
   background: var(--black-medium);
   border-color: var(--black-medium);
   color: #fff;
 }
 
-.btn-dark-black {
+.btn-black-dark {
   background: var(--black-dark);
   border-color: var(--black-dark);
   color: #fff;
 }
 
-.btn-darker-black {
+.btn-black-darker {
   background: var(--black-darker);
   border-color: var(--black-darker);
   color: #fff;

@@ -72,25 +72,25 @@
 }
 
 /* Variantes */
-.btn-light-purple {
+.btn-purple-light {
   background: var(--purple-light);
   border-color: var(--purple-light);
   color: #000;
 }
 
-.btn-medium-purple {
+.btn-purple-medium {
   background: var(--purple-medium);
   border-color: var(--purple-medium);
   color: #fff;
 }
 
-.btn-dark-purple {
+.btn-purple-dark {
   background: var(--purple-dark);
   border-color: var(--purple-dark);
   color: #fff;
 }
 
-.btn-darker-purple {
+.btn-purple-darker {
   background: var(--purple-darker);
   border-color: var(--purple-darker);
   color: #fff;
